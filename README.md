@@ -1,6 +1,6 @@
 # Simple-nav 简单导航
 
-这是一个使用 [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) 引导创建的 [Next.js](https://nextjs.org) 项目。
+一个简单的导航项目，使用 [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) 引导创建的 [Next.js](https://nextjs.org) 项目。
 
 ## 开始使用
 
