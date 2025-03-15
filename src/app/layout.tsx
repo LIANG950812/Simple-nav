@@ -2,21 +2,32 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import Image from 'next/image';
 import "./globals.css";
 
-const geistSans = Geist({
+// 使用系统字体代替Google字体，避免网络连接问题
+const geistSans = localFont({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["Arial", "Helvetica", "sans-serif"],
+  src: [
+    {
+      path: "../../public/fonts/system-sans.woff2",
+      weight: "400",
+      style: "normal",
+    }
+  ],
+  fallback: ["Arial", "Helvetica", "system-ui", "sans-serif"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
+  src: [
+    {
+      path: "../../public/fonts/system-mono.woff2",
+      weight: "400",
+      style: "normal",
+    }
+  ],
   fallback: ["Consolas", "Monaco", "monospace"],
 });
 
